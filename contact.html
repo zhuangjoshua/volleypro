@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolleyPro: Contact - Get in Touch with Us</title>
+    <meta name="description" content="Contact VolleyPro for inquiries about volleyball news and equipment. We're here to assist you with any questions.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="header">
+        <h1>VolleyPro: Contact</h1>
+    </header>
+    <div id="container">
+        <nav id="sidebar">
+            <a href="intro.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <main id="content">
+            <div id="main-content" class="contact-content">
+                <h2>Contact Us</h2>
+                <p>For any inquiries, please email us at <a href="mailto:info@volleypro.com">info@volleypro.com</a>.</p>
+            </div>
+        </main>
+    </div>
+    <footer id="footer">
+        <p>Return to <a href="intro.html">Home</a></p>
+    </footer>
+    <div id="theme-switcher">
+        <button id="light-mode" aria-label="Switch to light mode">Light Mode</button>
+        <button id="dark-mode" aria-label="Switch to dark mode">Dark Mode</button>
+    </div>
+    <div id="font-size-adjuster">
+        <button id="decrease-font" aria-label="Decrease font size">A-</button>
+        <button id="increase-font" aria-label="Increase font size">A+</button>
+    </div>
+    <script>
+        // Theme Switcher
+        const lightModeButton = document.getElementById('light-mode');
+        const darkModeButton = document.getElementById('dark-mode');
+
+        lightModeButton.addEventListener('click', () => {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        });
+
+        darkModeButton.addEventListener('click', () => {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Font Size Adjuster
+        const decreaseFontButton = document.getElementById('decrease-font');
+        const increaseFontButton = document.getElementById('increase-font');
+        let currentFontSize = 16;
+
+        decreaseFontButton.addEventListener('click', () => {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                document.body.style.fontSize = currentFontSize + 'px';
+                localStorage.setItem('fontSize', currentFontSize);
+            }
+        });
+
+        increaseFontButton.addEventListener('click', () => {
+            if (currentFontSize < 24) {
+                currentFontSize += 2;
+                document.body.style.fontSize = currentFontSize + 'px';
+                localStorage.setItem('fontSize', currentFontSize);
+            }
+        });
+
+        // Check for saved font size preference
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            currentFontSize = parseInt(savedFontSize);
+            document.body.style.fontSize = currentFontSize + 'px';
+        }
+    </script>
+</body>
+</html>
