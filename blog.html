@@ -3,33 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolleyPro: Blog - Latest Volleyball News and Updates</title>
-    <meta name="description" content="Stay updated with the latest volleyball news, including Olympics 2024 rankings, team rosters, and technology updates.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>VolleyPro: Blog</title>
+    <script src="theme-switcher.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header id="header">
         <h1>VolleyPro: Blog</h1>
     </header>
+
     <div id="container">
-        <nav id="sidebar">
+        <nav>
             <a href="intro.html">Home</a>
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="resources.html">Resources</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <main id="content">
+
+        <main id="content" role="main">
             <div id="main-content">
-                <article class="blog-card">
+                <article>
                     <h2><a href="#">Rankings for Olympics 2024 Teams</a></h2>
                     <p>Details about the rankings for the upcoming Olympic teams.</p>
                 </article>
-                <article class="blog-card">
+                <article>
                     <h2><a href="#">Polish Roster Released</a></h2>
                     <p>Information about the Polish team's roster for the next big event.</p>
                 </article>
-                <article class="blog-card">
-                    <h2><a href="#">New Technology Implemented for Paris</a></h
+                <article>
+                    <h2><a href="#">New Technology Implemented for Paris</a></h2>
+                    <p>Learn about the latest technological advancements for the Paris Olympics.</p>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <div id="theme-switcher">
+        <button aria-label="Switch to Light Mode">Light Mode</button>
+        <button aria-label="Switch to Dark Mode">Dark Mode</button>
+    </div>
+
+    <div id="font-size-adjuster">
+        <button aria-label="Decrease font size">A-</button>
+        <button aria-label="Increase font size">A+</button>
+    </div>
+</body>
+</html>

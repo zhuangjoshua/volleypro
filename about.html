@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolleyPro: About</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="theme-switcher.js"></script>
     <style>
-        .about-content {
-            opacity: 0;
-            transform: translateY(20px);
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
     </style>
 </head>
@@ -31,10 +39,7 @@
         <main id="content" role="main">
             <div id="main-content" class="about-content">
                 <h2>We exist to provide news on current volleyball news as well as sell equipment which can be found in our resources!</h2>
-
-                <img src="https://www.shutterstock.com/shutterstock/photos/1949417620/display_1500/stock-vector-volley-ball-set-sport-equipment-and-accessories-ball-net-clothing-and-court-with-sports-1949417620.jpg" 
-                     alt="Various volleyball equipment including balls, net, clothing, and court illustration">
-
+                <img src="https://www.shutterstock.com/shutterstock/photos/1949417620/display_1500/stock-vector-volley-ball-set-sport-equipment-and-accessories-ball-net-clothing-and-court-with-sports-1949417620.jpg" alt="Various volleyball equipment including balls, net, clothing, and court illustration">
                 <p>Our mission is to deliver the latest updates in the world of volleyball and offer a variety of equipment to enhance your game. Join our community to stay informed and equipped.</p>
             </div>
         </main>
@@ -45,58 +50,13 @@
     </footer>
 
     <div id="theme-switcher">
-        <button>Light Mode</button>
-        <button>Dark Mode</button>
+        <button aria-label="Switch to Light Mode">Light Mode</button>
+        <button aria-label="Switch to Dark Mode">Dark Mode</button>
     </div>
 
     <div id="font-size-adjuster">
-        <button>A-</button>
-        <button>A+</button>
+        <button aria-label="Decrease font size">A-</button>
+        <button aria-label="Increase font size">A+</button>
     </div>
-
-    <!-- Add anime.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
-    <script>
-        console.log('About page script started');
-
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded on About page');
-
-            setTimeout(function() {
-                console.log('Running About page animation');
-
-                // Animate the about content
-                anime({
-                    targets: '.about-content',
-                    opacity: [0, 1],
-                    translateY: [20, 0],
-                    easing: 'easeOutExpo',
-                    duration: 1000,
-                    delay: 300
-                });
-
-                // Animate the image
-                anime({
-                    targets: '.about-content img',
-                    scale: [0.9, 1],
-                    easing: 'easeOutExpo',
-                    duration: 1000,
-                    delay: 600
-                });
-
-                // Animate the paragraph text
-                anime({
-                    targets: '.about-content p',
-                    opacity: [0, 1],
-                    translateX: [-20, 0],
-                    easing: 'easeOutExpo',
-                    duration: 800,
-                    delay: 900
-                });
-
-            }, 500); // 500ms delay before starting animations
-        });
-    </script>
 </body>
 </html>

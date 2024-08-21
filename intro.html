@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolleyPro: Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="theme-switcher.js"></script>
     <style>
-        /* Add some basic styles for the animations */
-        #header h1, #main-content h2, #main-content img {
-            opacity: 0;
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
     </style>
 </head>
@@ -31,10 +39,7 @@
         <main id="content" role="main">
             <div id="main-content" class="intro-content">
                 <h2>Welcome to VolleyPro, the place for all your volleyball news and equipment!</h2>
-
-                <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_sm_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" 
-                     alt="Volleyball match in progress with players jumping at the net">
-
+                <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_sm_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" alt="Volleyball match in progress with players jumping at the net">
                 <p>Stay updated with the latest volleyball news, find top-notch equipment, and connect with the volleyball community.</p>
             </div>
         </main>
@@ -46,61 +51,13 @@
     </footer>
 
     <div id="theme-switcher">
-        <button>Light Mode</button>
-        <button>Dark Mode</button>
+        <button aria-label="Switch to Light Mode">Light Mode</button>
+        <button aria-label="Switch to Dark Mode">Dark Mode</button>
     </div>
 
     <div id="font-size-adjuster">
-        <button>A-</button>
-        <button>A+</button>
+        <button aria-label="Decrease font size">A-</button>
+        <button aria-label="Increase font size">A+</button>
     </div>
-
-    <!-- Add anime.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
-    <!-- Your custom JavaScript file -->
-    <script>
-        // Wait for the DOM to load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate the main heading
-            anime({
-                targets: '#header h1',
-                opacity: [0, 1],
-                translateY: [-50, 0],
-                easing: 'easeOutExpo',
-                duration: 1200,
-                delay: 300
-            });
-
-            // Animate the welcome text
-            anime({
-                targets: '#main-content h2',
-                opacity: [0, 1],
-                translateX: [-50, 0],
-                easing: 'easeOutExpo',
-                duration: 1000,
-                delay: 500
-            });
-
-            // Animate the image
-            anime({
-                targets: '#main-content img',
-                opacity: [0, 1],
-                scale: [0.9, 1],
-                easing: 'easeOutExpo',
-                duration: 1000,
-                delay: 700
-            });
-
-            // Animate nav links
-            anime({
-                targets: 'nav a',
-                opacity: [0, 1],
-                translateY: [-20, 0],
-                delay: anime.stagger(100, {start: 1000}),
-                easing: 'easeOutExpo'
-            });
-        });
-    </script>
 </body>
 </html>

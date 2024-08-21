@@ -3,56 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolleyPro: Resources - Volleyball Equipment and Gear</title>
-    <meta name="description" content="Explore VolleyPro's resources for volleyball equipment, clothing, and protective gear. Find the best products to enhance your game.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>VolleyPro: Resources</title>
+    <script src="theme-switcher.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header id="header">
         <h1>VolleyPro: Resources</h1>
     </header>
+
     <div id="container">
-        <nav id="sidebar">
+        <nav>
             <a href="intro.html">Home</a>
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="resources.html">Resources</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <main id="content">
+
+        <main id="content" role="main">
             <div id="main-content">
-                <section class="resource-grid">
-                    <article class="resource-card">
-                        <h2>Equipment</h2>
-                        <p><a href="#" aria-label="Shop for volleyball equipment">Shop</a> for the latest volleyball equipment.</p>
-                    </article>
-                    <article class="resource-card">
-                        <h2>Clothing</h2>
-                        <p>Find the best <a href="#" aria-label="Shop for volleyball clothing">volleyball clothing</a> to enhance your performance.</p>
-                    </article>
-                    <article class="resource-card">
-                        <h2>Knee Pads</h2>
-                        <p>Protect yourself with our top-rated <a href="#" aria-label="Shop for volleyball knee pads">knee pads</a>.</p>
-                    </article>
-                </section>
+                <div class="section resource-grid">
+                    <h2>Equipment</h2>
+                    <a href="#" aria-label="Shop for volleyball equipment">Shop</a> for the latest volleyball equipment.
+
+                    <h2>Clothing</h2>
+                    <p>Find the best <a href="#" aria-label="Shop for volleyball clothing">volleyball clothing</a> to enhance your performance.</p>
+
+                    <h2>Knee Pads</h2>
+                    <p>Protect yourself with our top-rated <a href="#" aria-label="Shop for volleyball knee pads">knee pads</a>.</p>
+                </div>
             </div>
         </main>
     </div>
-    <footer id="footer">
+
+    <footer>
         <p>Info Link: <a href="http://volleypro.com/info">volleypro.com/info</a></p>
     </footer>
+
     <div id="theme-switcher">
-        <button id="light-mode" aria-label="Switch to light mode">Light Mode</button>
-        <button id="dark-mode" aria-label="Switch to dark mode">Dark Mode</button>
+        <button aria-label="Switch to Light Mode">Light Mode</button>
+        <button aria-label="Switch to Dark Mode">Dark Mode</button>
     </div>
+
     <div id="font-size-adjuster">
-        <button id="decrease-font" aria-label="Decrease font size">A-</button>
-        <button id="increase-font" aria-label="Increase font size">A+</button>
+        <button aria-label="Decrease font size">A-</button>
+        <button aria-label="Increase font size">A+</button>
     </div>
-    <script>
-        // Theme Switcher and Font Size Adjuster script (same as in other files)
-    </script>
 </body>
 </html>
