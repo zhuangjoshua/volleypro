@@ -4,64 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolleyPro: Blog</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="theme-switcher.js"></script>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-        }
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
-        }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header id="header">
+    <div id="header">
         <h1>VolleyPro: Blog</h1>
-    </header>
+    </div>
 
     <div id="container">
-        <nav>
+        <div id="sidebar">
             <a href="intro.html">Home</a>
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="resources.html">Resources</a>
             <a href="contact.html">Contact</a>
-        </nav>
+        </div>
 
-        <main id="content" role="main">
+        <div id="content" role="main">
             <div id="main-content">
-                <article>
+                <div class="blog-card">
                     <h2><a href="#">Rankings for Olympics 2024 Teams</a></h2>
                     <p>Details about the rankings for the upcoming Olympic teams.</p>
-                </article>
-                <article>
+                </div>
+                <div class="blog-card">
                     <h2><a href="#">Polish Roster Released</a></h2>
                     <p>Information about the Polish team's roster for the next big event.</p>
-                </article>
-                <article>
+                </div>
+                <div class="blog-card">
                     <h2><a href="#">New Technology Implemented for Paris</a></h2>
                     <p>Learn about the latest technological advancements for the Paris Olympics.</p>
-                </article>
+                </div>
             </div>
-        </main>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2023 VolleyPro. All rights reserved.</p>
     </div>
 
     <div id="theme-switcher">
-        <button aria-label="Switch to Light Mode">Light Mode</button>
-        <button aria-label="Switch to Dark Mode">Dark Mode</button>
+        <button>Light Mode</button>
+        <button>Dark Mode</button>
     </div>
 
     <div id="font-size-adjuster">
-        <button aria-label="Decrease font size">A-</button>
-        <button aria-label="Increase font size">A+</button>
+        <button>A-</button>
+        <button>A+</button>
     </div>
 </body>
 </html>

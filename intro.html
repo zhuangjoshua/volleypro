@@ -4,60 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolleyPro: Home</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="theme-switcher.js"></script>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-        }
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
-        }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header id="header">
+    <div id="header">
         <h1>VolleyPro: Home</h1>
-    </header>
+    </div>
 
     <div id="container">
-        <nav>
+        <div id="sidebar">
             <a href="intro.html">Home</a>
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="resources.html">Resources</a>
             <a href="contact.html">Contact</a>
-        </nav>
+        </div>
 
-        <main id="content" role="main">
+        <div id="content" role="main">
             <div id="main-content" class="intro-content">
                 <h2>Welcome to VolleyPro, the place for all your volleyball news and equipment!</h2>
                 <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_sm_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" alt="Volleyball match in progress with players jumping at the net">
                 <p>Stay updated with the latest volleyball news, find top-notch equipment, and connect with the volleyball community.</p>
             </div>
-        </main>
+        </div>
     </div>
 
-    <footer>
+    <div id="footer">
         <p>Email: <a href="mailto:info@volleypro.com">info@volleypro.com</a></p>
         <p>Jump Link: <a href="contact.html">Contact</a></p>
-    </footer>
+    </div>
 
     <div id="theme-switcher">
-        <button aria-label="Switch to Light Mode">Light Mode</button>
-        <button aria-label="Switch to Dark Mode">Dark Mode</button>
+        <button>Light Mode</button>
+        <button>Dark Mode</button>
     </div>
 
     <div id="font-size-adjuster">
-        <button aria-label="Decrease font size">A-</button>
-        <button aria-label="Increase font size">A+</button>
+        <button>A-</button>
+        <button>A+</button>
     </div>
 </body>
 </html>

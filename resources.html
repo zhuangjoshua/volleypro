@@ -4,43 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolleyPro: Resources</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="theme-switcher.js"></script>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-        }
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
-        }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header id="header">
+    <div id="header">
         <h1>VolleyPro: Resources</h1>
-    </header>
+    </div>
 
     <div id="container">
-        <nav>
+        <div id="sidebar">
             <a href="intro.html">Home</a>
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="resources.html">Resources</a>
             <a href="contact.html">Contact</a>
-        </nav>
+        </div>
 
-        <main id="content" role="main">
+        <div id="content" role="main">
             <div id="main-content">
                 <div class="section resource-grid">
                     <h2>Equipment</h2>
-                    <a href="#" aria-label="Shop for volleyball equipment">Shop</a> for the latest volleyball equipment.
+                    <p><a href="#" aria-label="Shop for volleyball equipment">Shop</a> for the latest volleyball equipment.</p>
 
                     <h2>Clothing</h2>
                     <p>Find the best <a href="#" aria-label="Shop for volleyball clothing">volleyball clothing</a> to enhance your performance.</p>
@@ -49,21 +36,21 @@
                     <p>Protect yourself with our top-rated <a href="#" aria-label="Shop for volleyball knee pads">knee pads</a>.</p>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 
-    <footer>
+    <div id="footer">
         <p>Info Link: <a href="http://volleypro.com/info">volleypro.com/info</a></p>
-    </footer>
+    </div>
 
     <div id="theme-switcher">
-        <button aria-label="Switch to Light Mode">Light Mode</button>
-        <button aria-label="Switch to Dark Mode">Dark Mode</button>
+        <button>Light Mode</button>
+        <button>Dark Mode</button>
     </div>
 
     <div id="font-size-adjuster">
-        <button aria-label="Decrease font size">A-</button>
-        <button aria-label="Increase font size">A+</button>
+        <button>A-</button>
+        <button>A+</button>
     </div>
 </body>
 </html>
